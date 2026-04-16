@@ -1,30 +1,23 @@
-
 package domain;
 
-
 public class Marca {
-    private String Nombre;
-    private String Pais;
+    private String nombre;
+    private String pais;
 
-    public Marca(String Nombre, String Pais) {
-        this.Nombre = Nombre;
-        this.Pais = Pais;
-    }
-
-    public Marca(String renault) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Marca(String nombre, String pais) {
+        this.nombre = nombre;
+        this.pais = pais;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public String getPais() {
-        return Pais;
+        return pais;
     }
 
-    String getDescripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public String getDescripcion() {
+        return nombre + " (" + pais + ")";
     }
-    
 }

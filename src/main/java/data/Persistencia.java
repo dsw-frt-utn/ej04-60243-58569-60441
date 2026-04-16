@@ -28,10 +28,10 @@ public class Persistencia {
         Sucursal s1 = sucursales.get(0);
         Sucursal s2 = sucursales.get(1);
         
-        Marca m1 = new Marca("Renault");
-        Marca m2 = new Marca("Ford");
-        Marca m3 = new Marca("Iveco");
-        Marca m4 = new Marca("Mercedes");
+        Marca m1 = new Marca("Renault", "Francia");
+        Marca m2 = new Marca("Ford", "EEUU");
+        Marca m3 = new Marca("Iveco", "Italia");
+        Marca m4 = new Marca("Mercedes", "Alemania");
         
         VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", m1, "Kangoo E-Tech", 2020, 1000, s1, 16);
         VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", m2, "E-Transit", 2021, 1300, s2, 16);
