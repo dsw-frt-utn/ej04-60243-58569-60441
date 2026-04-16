@@ -24,25 +24,30 @@ public class Persistencia {
         sucursales.add(s2);
     }
     
-    private static void inicializarVehiculos(){
+    public static void inicializarVehiculo(String tipo, String marca, String patente, String modelo, int anio, int carga, String suc, double kwh, double litros, double extra){
         Sucursal s1 = sucursales.get(0);
         Sucursal s2 = sucursales.get(1);
         
-        Marca m1 = new Marca("Renault", "Francia");
-        Marca m2 = new Marca("Ford", "EEUU");
-        Marca m3 = new Marca("Iveco", "Italia");
-        Marca m4 = new Marca("Mercedes", "Alemania");
+        Marca m1 = new Marca(marca);
         
-        VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", m1, "Kangoo E-Tech", 2020, 1000, s1, 16);
-        VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", m2, "E-Transit", 2021, 1300, s2, 16);
-
-        VehiculoCombustible v3 = new VehiculoCombustible("AC789JK", m3, "Daily", 2023, 1200, s1, 8, 1.5);
-        VehiculoCombustible v4 = new VehiculoCombustible("AD321LM", m4, "Sprinter", 2020, 1200, s2, 7, 1);
-        
-        vehiculos.add(v1);
-        vehiculos.add(v2);
-        vehiculos.add(v3);
-        vehiculos.add(v4);
+        if(tipo.equals("Electrico")){
+            if(suc.equals("Sucursal1")){
+                VehiculoElectrico v1 = new VehiculoElectrico(patente, m1, modelo, anio, carga, s1, kwh);
+                vehiculos.add(v1);
+            }else{
+                VehiculoElectrico v1 = new VehiculoElectrico(patente, m1, modelo, anio, carga, s2, kwh);
+                vehiculos.add(v1);
+            }
+            
+        }else{
+            if(suc.equals("Sucursal1")){
+                VehiculoCombustible v1 = new VehiculoCombustible(patente, m1, modelo, anio, carga, s1, litros, extra);
+                vehiculos.add(v1);
+            }else{
+                VehiculoCombustible v1 = new VehiculoCombustible(patente, m1, modelo, anio, carga, s2, litros, extra);
+                vehiculos.add(v1);
+            }
+        }
     }
     
     public static ArrayList<Vehiculo> getVehiculos(){
@@ -58,6 +63,5 @@ public class Persistencia {
     public static void inicializar(){
         inicializarResponsables();
         inicializarSucursales();
-        inicializarVehiculos();
     }
 }

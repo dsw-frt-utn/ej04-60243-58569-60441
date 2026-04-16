@@ -9,7 +9,7 @@ public abstract class Vehiculo {
     protected Sucursal sucursal;
     private VehiculoTipo tipo;
 
-    public Vehiculo(String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal, VehiculoTipo tipo) {
+    public Vehiculo(VehiculoTipo tipo, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal) {
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
