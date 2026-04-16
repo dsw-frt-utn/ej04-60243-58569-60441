@@ -8,7 +8,7 @@ public class VehiculoCombustible extends Vehiculo {
 
     public VehiculoCombustible(String patente, Marca marca, String modelo, int anio, double capacidadCarga,
                                Sucursal sucursal, double kilometrosPorLitro, double litrosExtra) {
-        super(VehiculoTipo.COMBUSTIBLE, patente, marca, modelo, anio, capacidadCarga, sucursal);
+        super(patente, marca, modelo, anio, capacidadCarga, sucursal, VehiculoTipo.COMBUSTIBLE);
         this.kilometrosPorLitro = kilometrosPorLitro;
         this.litrosExtra = litrosExtra;
     }
