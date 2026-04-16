@@ -9,12 +9,29 @@ import java.util.Optional;
 
 public class Controlador {
     
+    static ListarVehiculosView view = new ListarVehiculosView();
+    static AgregarVehiculoView view1 = new AgregarVehiculoView();
+    
     public static ArrayList<VehiculoViewModel> getVehiculos(){
         ArrayList<VehiculoViewModel> vehiculos = new ArrayList<>();
         for(Vehiculo vehiculo : Persistencia.getVehiculos()) {
             vehiculos.add(new VehiculoViewModel(vehiculo));
         }
         return vehiculos;
+    }
+    
+        public static void abrirListar(){        
+        view.setVisible(true);
+    }
+    public static void cerrarListar(){
+        view.dispose();
+    }
+    
+    public static void abrirAgregar(){        
+        view1.setVisible(true);
+    }
+    public static void cerrarAgregar(){
+        view1.dispose();
     }
     
     public static double[] calcularConsumos(Map<String, Double> vehiculos){
