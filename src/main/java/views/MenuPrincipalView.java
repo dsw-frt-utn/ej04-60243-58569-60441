@@ -31,10 +31,17 @@ public class MenuPrincipalView extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 245, 235));
 
+        jLabel1.setBackground(new java.awt.Color(52, 73, 94));
         jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(33, 37, 41));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MENU PRINCIPAL ");
 
+        jButton1.setBackground(new java.awt.Color(52, 73, 94));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("LISTAR VEHICULOS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -42,6 +49,9 @@ public class MenuPrincipalView extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(52, 73, 94));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("AGREGAR VEHICULOS");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +95,8 @@ public class MenuPrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     javax.swing.JOptionPane.showMessageDialog(this, "PENDIENTE");
+     AgregarVehiculoView view = new AgregarVehiculoView();
+     view.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
