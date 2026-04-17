@@ -5,7 +5,7 @@ public class VehiculoElectrico extends Vehiculo {
 
     public VehiculoElectrico(String patente, Marca marca, String modelo, int anio, double capacidadCarga,
                              Sucursal sucursal, double kwhBase) {
-        super(patente, marca, modelo, anio, capacidadCarga, sucursal, VehiculoTipo.ELECTRICO);
+        super(VehiculoTipo.ELECTRICO, patente, marca, modelo, anio, capacidadCarga, sucursal);
         this.kwhBase = kwhBase;
     }
 

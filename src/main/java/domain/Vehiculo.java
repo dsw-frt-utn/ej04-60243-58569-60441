@@ -48,6 +48,6 @@ public abstract class Vehiculo {
     }
     @Override
     public String toString() {
-        return patente + " - " + marca.getDescripcion() + " " + modelo + " - Sucursal: " + sucursal.getCodigo();
+        return patente + " - " + marca.getNombre() + " " + modelo + " - Sucursal: " + sucursal.getCodigo();
     }
 }
